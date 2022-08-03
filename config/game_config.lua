@@ -1,7 +1,7 @@
-skynet_root = "3rd/skynet/"
+skynet_root = "skynet/"
 root = "./"
 thread = 8
-logger = "logs/game1.log"
+logger = "logs/game.log"
 logpath = "../log/"
 statistic_path = "./logs/statistic/"
 harbor = 0

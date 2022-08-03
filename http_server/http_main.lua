@@ -3,5 +3,5 @@ require("skynet.manager")
 
 
 skynet.start(function()
-    
+    skynet.uniqueservice()
 end)

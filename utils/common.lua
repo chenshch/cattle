@@ -51,22 +51,6 @@ function check_sql_str(str)
     return false
 end
 
--- 过滤并替换特殊字符
-function quote_sql_str(str)
-    local escape_map = {
-        ['\0'] = "*",
-        ['\b'] = "\\b",
-        ['\n'] = "\\n",
-        ['\r'] = "\\r",
-        ['\t'] = "\\t",
-        ['\26'] = "*",
-        ['\\'] = "\\\\",
-        ["'"] = "*",
-        ['"'] = '\\"',
-    }
-    return string.format("%s", string.gsub(str, "[\0\b\n\r\t\26\\\'\"]", escape_map))
-end
-
 -- 获取文件夹下所有的文件名(lua文件)
 function get_dir_all_files(path)
     local files = {}
